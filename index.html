@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Device Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>📱 Samsung Device Management</h1>
+    <p>Cloud-Based Device Management System</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Add Samsung Device</h2>
+
+        <input type="text" id="deviceName" placeholder="Device Name">
+        
+        <select id="deviceType">
+            <option value="Smartphone">Smartphone</option>
+            <option value="Tablet">Tablet</option>
+            <option value="Smartwatch">Smartwatch</option>
+            <option value="TV">Smart TV</option>
+        </select>
+
+        <input type="text" id="model" placeholder="Model Number">
+        
+        <input type="text" id="owner" placeholder="Owner Name">
+
+        <select id="status">
+            <option value="Active">Active</option>
+            <option value="Repair">Repair</option>
+            <option value="Lost">Lost</option>
+        </select>
+
+        <button onclick="addDevice()">Add Device</button>
+    </div>
+
+    <div class="card">
+        <h2>Search Device</h2>
+
+        <input 
+            type="text" 
+            id="search"
+            placeholder="Search by device name..."
+            onkeyup="searchDevice()"
+        >
+    </div>
+
+    <div class="card">
+        <h2>Device List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Device</th>
+                    <th>Type</th>
+                    <th>Model</th>
+                    <th>Owner</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="deviceList">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
